@@ -1,0 +1,542 @@
+$primary: #26ade7;
+$danger: #e72626;
+@import "bulma/bulma.sass";
+
+$catz-blue: #001c54;
+$filter-pane-width: 200px;
+$banner-height: 100px;
+$footer-height: 124px;
+$page-body-height: calc(100% - ($banner-height + $footer-height));
+$min-body-height: 500px;
+$search-base-height: 100px;
+
+/* GENERAL STYLES */
+
+/*
+ * Page Styles
+ */
+.full-page {
+  background-color: #fff;
+  overflow-x: auto;
+  height: 100vh;
+  width: 100vw;
+}
+.is-bottom {
+  padding-top: 59px;
+}
+.side-banner {
+  width: 216px;
+  height: fit-content;
+  min-height: $min-body-height;
+}
+.blank-side-banner {
+  @extend .side-banner;
+  background-color: #ffffff;
+}
+.overflow-y {
+  overflow-y: auto;
+}
+.row-stack {
+  display: flex;
+  flex-direction: row;
+}
+.row-stack-reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.column-stack {
+  display: flex;
+  flex-direction: column;
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+.centred {
+  justify-content: center;
+}
+.center-text {
+  text-align: center;
+}
+.evenly-spaced {
+  justify-content: space-between;
+}
+.record-title {
+  font-size: 40px;
+  color: $catz-blue;
+  font-weight: normal;
+}
+.gradient-back {
+  background: rgb(244, 255, 254);
+  background: linear-gradient(
+    90deg,
+    rgba(244, 255, 254, 1) 0%,
+    rgba(226, 255, 250, 1) 22%,
+    rgba(226, 255, 250, 1) 78%,
+    rgba(244, 255, 254, 1) 100%
+  );
+}
+.is-screen-size {
+  width: 100vw;
+  height: 100vh;
+}
+.screen-container {
+  @extend .is-screen-size;
+  display: flex;
+  background-color: #fff;
+  flex-direction: column;
+}
+.page-banner {
+  display: flex;
+  width: 100vw;
+  margin: 0 !important;
+  height: $banner-height;
+}
+.page-footer {
+  width: 100vw;
+  background-color: #bbbbbb;
+  color: #000;
+  height: $footer-height;
+}
+.page-body {
+  width: 100vw;
+  overflow-y: auto;
+  height: $page-body-height;
+  min-height: $min-body-height;
+  overflow-x: hidden;
+  margin: 0 !important;
+}
+.blue-background {
+  @extend .p-5;
+  background-color: #c6fffa;
+  border-radius: 15px;
+  border-width: 7px;
+  border-style: solid;
+  border-color: $catz-blue;
+}
+.nav-box {
+  width: 247px;
+  height: fit-content;
+  padding: 16.01px !important;
+}
+.nav-box-image {
+  width: 215px;
+  height: 215px;
+  background-color: #000;
+}
+/* ELEMENTS */
+
+/*
+ * Element: button
+ */
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/*
+ * Element: a
+ */
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+/*
+ * Element: body
+ */
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/*
+ * Element: input[type="checkbox"]
+ */
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 24px;
+  height: 24px;
+  border: 3px solid #000;
+  background-color: #fff;
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+}
+/* Style for checked state */
+input[type="checkbox"]:checked {
+  background-color: #fff;
+  border: 3px solid #000;
+  border-radius: 6px;
+}
+/* Style for the tick inside the checked checkbox */
+input[type="checkbox"]:checked::after {
+  content: "\2713"; /* Unicode character for a checkmark */
+  font-size: 24px;
+  font-weight: bold;
+  top: -8px;
+  left: 1px;
+  color: #000;
+  position: relative;
+}
+
+/*
+ * Element: h1
+ */
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+/* COMPONENTS */
+
+/*
+ * Component: Logo
+ */
+.Logo {
+  background-color: grey;
+  width: 400px;
+  height: 100px;
+}
+
+/*
+ * Component: Tabs
+ */
+.page-tabs {
+  height: $banner-height;
+}
+
+/*
+ * Component: Accordion
+ */
+.card {
+  padding: 2em;
+}
+.accordian {
+  @extend .card;
+  padding: 0;
+}
+.accordion-header {
+  @extend .card-header;
+  cursor: pointer;
+}
+.accordian-title {
+  @extend .card-header-title;
+  max-width: 250px;
+  overflow-x: clip;
+}
+.accordian-icon {
+  @extend .card-header-icon;
+  padding: 0;
+}
+
+/*
+ * Component: Alert
+ */
+.alert {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+/*
+ * Component: Query Element
+ */
+.query-element {
+  width: 500px;
+  max-height: 60px;
+  padding: 10px;
+}
+.query-element-text {
+  padding: 5px;
+  padding-left: 10px;
+  align-items: center;
+}
+
+/*
+ * Component: AddOption
+ */
+.add-option {
+  background-color: #ffffff;
+  background-clip: content-box;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 0.5vh;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/*
+ * Component: DrawerElement
+ */
+.drawer-elem {
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+  background-color: #ffffff;
+  overflow-y: auto;
+  overflow-x: clip;
+  bottom: 0;
+}
+.drawer-elem.left {
+  position: relative;
+  transition-property: left;
+  left: -100%;
+  height: 100%;
+  border-top-right-radius: 20px;
+}
+.drawer-elem.left.open {
+  left: 0;
+}
+.drawer-elem.right {
+  position: fixed;
+  height: 78vh;
+  transition-property: right;
+  right: -520px;
+  border-top-left-radius: 20px;
+}
+.drawer-elem.right.open {
+  right: 0;
+}
+.right::after {
+  background-color: #ffffff;
+}
+
+/*
+ * Component: Results Table
+ */
+.results-table {
+  @extend .table;
+  thead {
+    tr {
+      th {
+        background: rgb(0, 0, 0);
+        background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(122, 248, 255, 1) 52%,
+          rgba(122, 248, 255, 1) 100%
+        );
+      }
+    }
+  }
+}
+.results-table-container {
+  border: 5px solid #000;
+  border-radius: 10px;
+  overflow-y: auto;
+  overflow-x: auto;
+  max-height: 100%;
+}
+.results-page-body {
+  max-width: 100%;
+  height: calc(100% - ($banner-height + $search-base-height));
+  max-height: calc(100% - ($banner-height + $search-base-height));
+  display: flex;
+}
+.results-page-bar {
+  height: 50px;
+  max-height: 50px;
+}
+.darker {
+  background-color: #222222;
+  color: #ffffff;
+}
+.selected {
+  background-color: #26ade7;
+  color: #ffffff;
+}
+.sticky-column-top-left {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background-color: #fff;
+}
+.sticky-column-head {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: #fff;
+}
+.sticky-column {
+  position: sticky;
+  z-index: 1;
+  background-color: #fff;
+}
+.column-left {
+  left: 0;
+}
+.column-left::after {
+  content: "";
+  background-color: #000; /* Border color */
+}
+.column-right {
+  right: 0;
+}
+.column-right::after {
+  content: "";
+  background-color: #000; /* Border color */
+}
+.normal-column {
+  position: sticky;
+  z-index: 1;
+  background-color: #fff;
+}
+.dynamic-width {
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
+  transition-property: width;
+}
+
+.dynamic-width.left {
+  width: $filter-pane-width;
+  max-width: $filter-pane-width;
+}
+.dynamic-width.right {
+  width: calc(100% - $filter-pane-width);
+}
+.dynamic-width.left.closed {
+  width: 0px;
+}
+.dynamic-width.right.closed {
+  width: 100%;
+}
+
+/*
+ * Component: Close-button
+ */
+.close-button {
+  display: flex;
+  position: sticky;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  background-color: #000;
+}
+.close-button-new {
+  @extend .button;
+  background-color: transparent;
+}
+.close-button-new.red {
+  color: red;
+}
+
+/*
+ * Component: StCatzCollegeLogo
+ */
+.catz-logo {
+  color: $catz-blue;
+  font-weight: lighter;
+  margin: 0;
+}
+
+/*
+ * Component: ManageRoles
+ */
+.panel .is-selected {
+  color: $primary;
+}
+
+/*
+ * Component: ViewSTudentPopover
+ */
+.edit-student {
+  @extend .catz-logo;
+  text-align: center;
+}
+.edit-input {
+  color: #000;
+  justify-content: space-between;
+  margin-top: 1vh;
+}
+.student-profile-info {
+  color: #000;
+}
+
+/* Original */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
