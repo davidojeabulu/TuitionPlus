@@ -28,10 +28,17 @@ export const Tabs: React.FC<TabsProps> = ({ selectedTab }) => {
   };
 
   return (
-    <div className="tabs is-left is-bottom">
+    <div className="tabs is-centered is-bottom">
       <ul>
         {Object.values(Tab).map((tab) => (
-          <li className={tab === selectedTab ? "is-active" : ""} key={tab}>
+          <li
+            className={
+              tab === selectedTab
+                ? "is-active white-background"
+                : "white-background"
+            }
+            key={tab}
+          >
             <a
               onClick={() =>
                 navigate(

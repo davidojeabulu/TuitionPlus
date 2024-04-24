@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { MenuOptions } from "../../pages/Services/Services";
 import elevenPlus from "../../assets/elevenPlus.png";
 import exam from "../../assets/exam.png";
-import pricing from "../../assets/pricing.png";
 import school from "../../assets/school.png";
 
 interface NavBoxProps {
@@ -34,17 +33,12 @@ export const NavBox: React.FC<NavBoxProps> = ({ option }) => {
             <img src={exam} alt="Exam image" />
           </div>
         );
-      case MenuOptions.pricing:
-        return (
-          <div>
-            <img src={pricing} alt="Pricing image" />
-          </div>
-        );
     }
   };
 
   return (
     <button
+      className="no-border"
       onClick={() => navigate("/Services", { state: { option: option } })}
     >
       <div className="card nav-box">

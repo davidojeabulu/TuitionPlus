@@ -1,5 +1,5 @@
 import React from "react";
-
+import sideBanner5 from "../../assets/side-banner-5.png";
 import { Page } from "../../components/Page/Page";
 import { Tab } from "../../components/Tabs/Tabs";
 
@@ -50,7 +50,11 @@ export const Contact: React.FC<ContactProps> = ({}) => {
         </div>
       }
       leftTile={<div className="blank-side-banner"></div>}
-      rightTile={<div className="blank-side-banner"></div>}
+      rightTile={
+        <div>
+          <img className="side-banner" src={sideBanner5} />
+        </div>
+      }
     />
   );
 };

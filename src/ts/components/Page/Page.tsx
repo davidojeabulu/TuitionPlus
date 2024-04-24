@@ -1,5 +1,6 @@
 import React from "react";
 
+import bannerBackground from "../../assets/bannerBackground.png";
 import { Tab, Tabs } from "../Tabs/Tabs";
 import { Logo } from "../widgets/Logo";
 
@@ -19,13 +20,16 @@ export const Page: React.FC<PageProps> = ({
   return (
     <div className="full-page">
       <div className="columns is-gapless page-banner">
-        <div className="column">
+        <img className="banner-background" src={bannerBackground} />
+        <div className="column is-narrow">
           <Logo />
         </div>
         <div className="column page-tabs">
           <Tabs selectedTab={tab} />
         </div>
-        <div className="column" />
+        <div className="column is-narrow">
+          <div className="Logo" />
+        </div>
       </div>
       <div className="columns is-gapless page-body">
         <div className="column is-narrow">

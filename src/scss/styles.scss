@@ -6,8 +6,7 @@ $catz-blue: #001c54;
 $filter-pane-width: 200px;
 $banner-height: 100px;
 $footer-height: 124px;
-$page-body-height: calc(100% - ($banner-height + $footer-height));
-$min-body-height: 500px;
+$min-body-height: calc(100% - ($banner-height + $footer-height));
 $search-base-height: 100px;
 
 /* GENERAL STYLES */
@@ -24,10 +23,25 @@ $search-base-height: 100px;
 .is-bottom {
   padding-top: 59px;
 }
+.is-above {
+  z-index: 2 !important;
+}
+.banner-background {
+  position: absolute;
+  top: 0;
+  z-index: 0 !important;
+  height: $banner-height;
+  width: 100vw;
+  overflow: hidden;
+}
+.transparent-background {
+  background-color: transparent;
+}
 .side-banner {
   width: 216px;
-  height: fit-content;
+  height: 100%;
   min-height: $min-body-height;
+  background-color: #fff;
 }
 .blank-side-banner {
   @extend .side-banner;
@@ -39,6 +53,9 @@ $search-base-height: 100px;
 .row-stack {
   display: flex;
   flex-direction: row;
+}
+.wrap {
+  flex-wrap: wrap;
 }
 .row-stack-reverse {
   display: flex;
@@ -87,6 +104,9 @@ $search-base-height: 100px;
   flex-direction: column;
 }
 .page-banner {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
   display: flex;
   width: 100vw;
   margin: 0 !important;
@@ -101,7 +121,7 @@ $search-base-height: 100px;
 .page-body {
   width: 100vw;
   overflow-y: auto;
-  height: $page-body-height;
+  height: fit-content;
   min-height: $min-body-height;
   overflow-x: hidden;
   margin: 0 !important;
@@ -113,6 +133,10 @@ $search-base-height: 100px;
   border-width: 7px;
   border-style: solid;
   border-color: $catz-blue;
+}
+.white-background {
+  background-color: #fff;
+  z-index: 1 !important;
 }
 .nav-box {
   width: 247px;
@@ -146,6 +170,10 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+.no-border {
+  border-width: 1px !important;
+  padding: 0px !important;
 }
 
 /*
@@ -217,9 +245,12 @@ h1 {
  * Component: Logo
  */
 .Logo {
-  background-color: grey;
+  position: relative;
   width: 400px;
   height: 100px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  z-index: 1;
 }
 
 /*

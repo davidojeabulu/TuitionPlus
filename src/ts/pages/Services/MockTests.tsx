@@ -12,11 +12,8 @@ export const MockTests: React.FC = () => {
         sit the mock exam.
       </p>
       <p>
-        See <strong>Pricing</strong> tab for the pricing for sitting mock exams.
-      </p>
-      <p>
-        Although these are not compulsory, doing mock exams are very beneficial.
-        They enable students to:
+        Although these are <strong>not compulsory</strong>, doing mock exams are
+        very beneficial. They enable students to:
       </p>
       <ul>
         <li>Practise working under time conditions.</li>

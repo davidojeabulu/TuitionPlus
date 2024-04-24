@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 
+import sideBanner2 from "../../assets/side-banner-2.png";
+import sideBanner3 from "../../assets/side-banner-3.png";
+import sideBanner4 from "../../assets/side-banner-4.png";
 import { Page } from "../../components/Page/Page";
 import { Tab } from "../../components/Tabs/Tabs";
 import { MockTests } from "./MockTests";
 import { School } from "./School";
 import { ElevenPlus } from "./ElevenPlus";
-import { Pricing } from "./Pricing";
 
 interface ServicesProps {}
 
@@ -14,7 +16,6 @@ export enum MenuOptions {
   school = "School Support",
   elevenPlus = "11+ Preparation",
   tests = "Mock Tests",
-  pricing = "Pricing",
 }
 
 export const Services: React.FC<ServicesProps> = ({}) => {
@@ -33,8 +34,17 @@ export const Services: React.FC<ServicesProps> = ({}) => {
         return <MockTests />;
       case MenuOptions.elevenPlus:
         return <ElevenPlus />;
-      case MenuOptions.pricing:
-        return <Pricing />;
+    }
+  };
+
+  const getSideBanner = () => {
+    switch (menuOption) {
+      case MenuOptions.school:
+        return sideBanner2;
+      case MenuOptions.tests:
+        return sideBanner3;
+      case MenuOptions.elevenPlus:
+        return sideBanner4;
     }
   };
 
@@ -58,7 +68,11 @@ export const Services: React.FC<ServicesProps> = ({}) => {
           </ul>
         </aside>
       }
-      rightTile={<div></div>}
+      rightTile={
+        <div>
+          <img className="side-banner" src={getSideBanner()} />
+        </div>
+      }
     />
   );
 };
