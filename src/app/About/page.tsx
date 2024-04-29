@@ -36,9 +36,9 @@ const About: React.FC<AboutProps> = ({}) => {
             attending Grammar Schools.
           </p>
           <p>
-            The hope of Tuition Plus is that every student that attends the
+            {`The hope of Tuition Plus is that every student that attends the
             centre will go on to achieve considerably more than they would've
-            thought, because of the work done at Tuition Plus.
+            thought, because of the work done at Tuition Plus.`}
           </p>
           <p>
             Should you wish to enquire about the services that Tuition Plus

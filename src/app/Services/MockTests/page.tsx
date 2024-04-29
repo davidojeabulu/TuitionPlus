@@ -88,7 +88,7 @@ const MockTests: React.FC = () => {
                 </tr>
                 <tr>
                   <td>29-Jun-2024</td>
-                  <td>St Olaves'</td>
+                  <td>{`St Olaves'`}</td>
                   <td>12:00</td>
                   <td>15:00</td>
                 </tr>

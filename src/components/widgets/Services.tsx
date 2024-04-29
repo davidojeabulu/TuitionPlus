@@ -50,7 +50,7 @@ export const Services: React.FC<ServicesProps> = ({ menuOption, page }) => {
         <aside className="menu">
           <ul className="menu-list">
             {Object.values(MenuOptions).map((option) => (
-              <li>
+              <li key={option}>
                 <Link
                   className={menuOption === option ? "is-active" : ""}
                   href={get_url(option)}
