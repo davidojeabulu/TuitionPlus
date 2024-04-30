@@ -14,15 +14,12 @@ interface ServicesProps {
 }
 
 export enum MenuOptions {
-  school = "School Support",
   elevenPlus = "11+ Preparation",
   tests = "Mock Tests",
 }
 
 export const get_url = (option: MenuOptions) => {
   switch (option) {
-    case MenuOptions.school:
-      return "/Services/School";
     case MenuOptions.tests:
       return "/Services/MockTests";
     case MenuOptions.elevenPlus:
@@ -33,8 +30,6 @@ export const get_url = (option: MenuOptions) => {
 export const Services: React.FC<ServicesProps> = ({ menuOption, page }) => {
   const getSideBanner = () => {
     switch (menuOption) {
-      case MenuOptions.school:
-        return sideBanner2;
       case MenuOptions.tests:
         return sideBanner3;
       case MenuOptions.elevenPlus:

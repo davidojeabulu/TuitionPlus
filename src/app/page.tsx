@@ -133,9 +133,6 @@ const Home: React.FC<HomeProps> = ({}) => {
       page={
         <div className="row-stack flex centred wrap">
           <div className="m-2">
-            <NavBox option={MenuOptions.school} />
-          </div>
-          <div className="m-2">
             <NavBox option={MenuOptions.elevenPlus} />
           </div>
           <div className="m-2">

@@ -5,7 +5,7 @@ import { Services, MenuOptions } from "@/components/widgets/Services";
 const MockTests: React.FC = () => {
   return (
     <Services
-      menuOption={MenuOptions.school}
+      menuOption={MenuOptions.tests}
       page={
         <div className="content p-4">
           <p>

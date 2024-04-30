@@ -106,17 +106,20 @@ $search-base-height: 100px;
 .page-banner {
   position: relative;
   overflow-x: hidden;
-  overflow-y: hidden;
   display: flex;
   width: 100vw;
+  min-width: 400px;
   margin: 0 !important;
-  height: $banner-height;
+  min-height: $banner-height;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 .page-footer {
   width: 100vw;
   background-color: #bbbbbb;
   color: #000;
-  height: $footer-height;
+  height: fit-content;
+  min-height: $footer-height;
 }
 .page-body {
   width: 100vw;
@@ -258,6 +261,12 @@ h1 {
  */
 .page-tabs {
   height: $banner-height;
+  width: calc(100% - 800px);
+  min-width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
 }
 
 /*

@@ -5,7 +5,7 @@ import { Services, MenuOptions } from "@/components/widgets/Services";
 const ElevenPlus: React.FC = () => {
   return (
     <Services
-      menuOption={MenuOptions.school}
+      menuOption={MenuOptions.elevenPlus}
       page={
         <div className="content p-4">
           <p>
@@ -29,8 +29,9 @@ const ElevenPlus: React.FC = () => {
             as:
           </p>
           <p>
-            With our teaching, we have seen <strong>50 students pass</strong>{" "}
-            their 11+ entrance tests in the last 5 years.
+            With our teaching, we have seen{" "}
+            <strong>over 120 students pass</strong> their 11+ entrance tests in
+            the last 5 years.
           </p>
           <p>
             Should you wish to enquire about 11+ preparation, please send an

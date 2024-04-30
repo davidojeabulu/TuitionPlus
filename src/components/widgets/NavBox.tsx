@@ -14,12 +14,6 @@ interface NavBoxProps {
 export const NavBox: React.FC<NavBoxProps> = ({ option }) => {
   const getImage = () => {
     switch (option) {
-      case MenuOptions.school:
-        return (
-          <div>
-            <Image src={school} alt="School image" />
-          </div>
-        );
       case MenuOptions.elevenPlus:
         return (
           <div>

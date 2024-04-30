@@ -20,19 +20,19 @@ export const Page: React.FC<PageProps> = ({
 }) => {
   return (
     <div className="full-page">
-      <div className="columns is-gapless page-banner">
+      <div className="page-banner">
         <Image
           className="banner-background"
           alt="banner background"
           src={bannerBackground}
         />
-        <div className="column is-narrow">
+        <div className="">
           <Logo />
         </div>
-        <div className="column page-tabs">
+        <div className="page-tabs">
           <Tabs selectedTab={tab} />
         </div>
-        <div className="column is-narrow">
+        <div className="">
           <div className="Logo" />
         </div>
       </div>
